@@ -1,2 +1,4 @@
 {
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.external.osxExec": "Iterm.app",
 }

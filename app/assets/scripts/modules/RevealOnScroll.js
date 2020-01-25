@@ -1,3 +1,5 @@
+import throttle from 'lodash/throttle';
+
 class RevealOnScroll {
     constructor() {
         this.itemsToReveal = document.querySelectorAll(".feature-item")
@@ -7,10 +9,7 @@ class RevealOnScroll {
 
     events() {
         window.addEventListener("scroll", () => {
-            this.itemsToReveal.forEach(el => {
-                this.calculateIfScrolledTo(el);
-            })
-        })
+            this.itemsToReveal.forEach(el => this.calculateIfScrolledTo(el))});
     }
 
     calculateIfScrolledTo(el) {
